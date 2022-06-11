@@ -1,0 +1,43 @@
+#header {  height: 150px;  }
+
+#whos-turn {
+    width: 377px;
+    padding-top: 60px;
+    text-align: center;
+}
+
+#game-div {
+    box-sizing: border-box;
+    width: 377px;
+    height: 377px;
+    border: 1px solid black;
+}
+
+#game-grid {
+    width: 375px;
+    height: 375px;
+    color: black;
+    font-size: 80px;
+    text-align: center;
+    cursor: pointer;
+}
+    tr {
+        border-bottom: 1px solid lightgray;
+    }
+    tr:last-child {
+        border: none;
+    }
+        .game-cell {
+            width: 125px;
+            height: 125px;
+            border-right: 1px solid lightgray;
+        }
+        .game-cell:last-child {
+            border: none;
+        }
+
+#win-msg, #draw-msg {
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 1500ms;
+}

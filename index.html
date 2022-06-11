@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Noughts & Crosses</title>
+</head>
+<body>
+    <div class="container">
+        <div id="header">
+            <div id="intro" class="alert alert-light">
+                <h1>Fancy a game of Noughts & Crosses?</h1>
+                <h3>Click in a cell to go first</h3>
+            </div>   
+            <h2 id="whos-turn" hidden><span id="x-or-o">X</span>'s TURN</h2> 
+        </div>
+
+        <div id="game-div">
+            <table id="game-grid">   <!-- NOTE: Bootstrap does NOT allow fixed size tables! -->
+                <tr class="game-row">
+                    <td id="cell0" class="game-cell"></td>
+                    <td id="cell1" class="game-cell"></td>
+                    <td id="cell2" class="game-cell"></td>
+                </tr>
+                <tr class="game-row">
+                    <td id="cell3" class="game-cell"></td>
+                    <td id="cell4" class="game-cell"></td>
+                    <td id="cell5" class="game-cell"></td>
+                </tr>
+                <tr class="game-row">
+                    <td id="cell6" class="game-cell"></td>
+                    <td id="cell7" class="game-cell"></td>
+                    <td id="cell8" class="game-cell"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="row" style="padding-left: 12px">
+            <div id="win-msg" class="col-2 alert alert-success" >Congrats, you won!</div>
+            <div id="draw-msg" class="col-2 alert alert-warning" >No one won - draw</div>
+        </div>
+        <div class="col-4" style="display: flex; justify-content: center">
+            <button id="restart" class="btn btn-danger">Restart game</button>
+        </div>    
+    </div>
+
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
